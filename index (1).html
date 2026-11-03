@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daniel the Barber | תספורות וזקן</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2340ff;--ink:#14161f;--paper:#f6f4ff;--card:#fff;--coral:#ff6b4a;--muted:#5b5f72;--line:#dcd8f0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#f2f1fb;--paper:#12131c;--card:#1b1d2a;--muted:#a3a7bd;--line:#30334a}}
+:root[data-theme="dark"]{--ink:#f2f1fb;--paper:#12131c;--card:#1b1d2a;--muted:#a3a7bd;--line:#30334a}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Rubik,Arial,sans-serif;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.hero{background:var(--blue);color:#fff;padding:56px 0 64px}
+.hero .wrap{display:grid;gap:28px;grid-template-columns:1.3fr 1fr;align-items:center}
+h1{font-size:clamp(40px,8vw,76px);line-height:1.02;margin:0 0 16px;font-weight:800}
+.hero p{font-size:19px;margin:0 0 24px;max-width:34ch}
+.btn{display:inline-block;background:var(--coral);color:#14161f;font-weight:800;padding:14px 26px;border-radius:999px;text-decoration:none;border:0;font:inherit;font-weight:800;cursor:pointer}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.photo{aspect-ratio:4/5;border-radius:28px 28px 120px 28px;background:#fff2;border:2px dashed #fff8;display:grid;place-items:center;text-align:center;padding:16px;font-size:15px;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+section{padding:52px 0}
+h2{font-size:32px;margin:0 0 20px;font-weight:800}
+.prices{display:grid;gap:0;background:var(--card);border-radius:20px;border:1px solid var(--line);overflow:hidden}
+.row{display:flex;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}.row b{font-weight:800}
+.note{color:var(--muted);font-size:15px;margin-top:12px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.ph{aspect-ratio:1;border-radius:18px;background:var(--card);border:1px dashed var(--line);display:grid;place-items:center;color:var(--muted);font-size:14px}
+.ph:nth-child(2){border-radius:50% 18px 18px 18px}.ph:nth-child(4){border-radius:18px 18px 50% 18px}
+.book{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;display:grid;gap:14px;max-width:520px}
+label{display:grid;gap:6px;font-weight:500}
+input,select{font:inherit;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.wa{background:#25d366;color:#0b2b16;text-align:center}
+.reviews{background:var(--card);border-radius:20px;border:1px solid var(--line);padding:24px}
+footer{padding:36px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+details{margin-top:12px}summary{cursor:pointer;font-weight:500}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.hero h1,.hero p,.hero .btn,.photo{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero h1{animation-delay:.1s}.photo{animation-delay:.2s}.hero p{animation-delay:.3s}.hero .btn{animation-delay:.45s}
+.btn{transition:transform .15s}.btn:hover{transform:translateY(-3px) rotate(-1.5deg)}.btn:active{transform:scale(.97)}
+.row{transition:background .2s,padding .2s}.row:hover{background:var(--paper);padding-inline-start:28px}
+.ph{transition:transform .25s}.ph:hover{transform:rotate(-3deg) scale(1.04)}
+.strip{background:var(--coral);color:#14161f;overflow:hidden;direction:ltr;padding:12px 0;font-weight:800;font-size:18px;white-space:nowrap}
+.track{display:flex;gap:36px;width:max-content;animation:scroll 30s linear infinite}
+.track span{direction:rtl}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(max-width:700px){.hero .wrap{grid-template-columns:1fr}.photo{max-width:320px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+ <div>
+  <div lang="en" dir="ltr" style="font-weight:800;font-size:22px;margin-bottom:20px;text-align:right">Daniel the Barber</div>
+  <h1>תספורת טובה,<br>בלי תור של שעה.</h1>
+  <p>תספורות וטיפוח זקן בבית שלי. תור אחד בכל פעם, בלי למהר.</p>
+  <a class="btn" href="#book">קבע תור בוואטסאפ</a>
+ </div>
+ <div class="photo" id="photo">התמונה שלך תופיע כאן</div>
+</div></header>
+<div class="strip" aria-hidden="true"><div class="track"><span>תספורת גבר ✂</span><span>עיצוב זקן ✂</span><span>תספורת ילד ✂</span><span>תור אחד בכל פעם ✂</span><span>תספורת גבר ✂</span><span>עיצוב זקן ✂</span><span>תספורת ילד ✂</span><span>תור אחד בכל פעם ✂</span><span>תספורת גבר ✂</span><span>עיצוב זקן ✂</span><span>תספורת ילד ✂</span><span>תור אחד בכל פעם ✂</span><span>תספורת גבר ✂</span><span>עיצוב זקן ✂</span><span>תספורת ילד ✂</span><span>תור אחד בכל פעם ✂</span></div></div>
+
+<main class="wrap">
+<section id="prices">
+ <h2>מחירון</h2>
+ <div class="prices">
+  <div class="row"><span>תספורת גבר</span><b>₪60</b></div>
+  <div class="row"><span>תספורת + זקן</span><b>₪80</b></div>
+  <div class="row"><span>עיצוב זקן</span><b>₪35</b></div>
+  <div class="row"><span>תספורת ילד</span><b>₪45</b></div>
+ </div>
+ <p class="note">המחירים לדוגמה, נעדכן לפי המחירון שלך.</p>
+</section>
+
+<section id="work">
+ <h2>העבודות שלי</h2>
+ <div class="gallery"><div class="ph">תמונה 1</div><div class="ph">תמונה 2</div><div class="ph">תמונה 3</div><div class="ph">תמונה 4</div></div>
+ <p class="note">מפרסמים רק תמונות שצילמת בעצמך, ותמונות של לקוחות רק באישורם.</p>
+</section>
+
+<section id="book">
+ <h2>קביעת תור</h2>
+ <div class="book">
+  <label>שם<input id="n" placeholder="איך קוראים לך?"></label>
+  <label>שירות<select id="s"><option>תספורת גבר</option><option>תספורת + זקן</option><option>עיצוב זקן</option><option>תספורת ילד</option></select></label>
+  <label>תאריך<input id="d" type="date"></label>
+  <label>שעה<select id="h"><option value="">בחר שעה</option></select></label>
+  <p id="msg" class="note" role="alert" style="margin:0;color:var(--coral)"></p>
+  <a class="btn wa" id="send" href="https://wa.me/972535541715" target="_blank" rel="noopener">שלח בוואטסאפ</a>
+  <p class="note" style="margin:0">אני עובד בימים ראשון עד חמישי. ההודעה נפתחת בוואטסאפ ואתה שולח אותה בעצמך. התור מאושר רק אחרי שאחזור אליך. אפשר גם לשלוח הודעה ישירות למספר 053-554-1715.</p>
+ </div>
+</section>
+
+<section id="where">
+ <h2>איפה אני</h2>
+ <p>העבודה מתבצעת בבית שלי ב[שם העיר/השכונה]. הכתובת המדויקת והחניה נשלחות אליך בוואטסאפ אחרי שהתור נקבע.</p>
+ <p><a href="https://www.instagram.com/" rel="noopener">האינסטגרם שלי: @danielthebarber</a></p>
+</section>
+
+<section id="reviews">
+ <h2>מה אומרים הלקוחות</h2>
+ <div class="reviews">
+  <p style="margin:0 0 12px">עדיין אין ביקורות. אחרי התספורת הראשונה תוכל לבקש מלקוח לכתוב כמה מילים, ונפרסם אותן באישורו.</p>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+ <div>© Daniel the Barber. כל הזכויות שמורות.</div>
+ <details><summary>תנאי שימוש וביטול תור</summary>
+  <p>תור מבוטל עד שעתיים לפני מועדו ללא עלות. אי הגעה חוזרת ללא ביטול עשויה לחייב תשלום חלקי. המחירים עשויים להשתנות. התוצאה הסופית תלויה בסוג השיער ובבקשת הלקוח.</p></details>
+ <details><summary>מדיניות פרטיות</summary>
+  <p>האתר אינו אוסף מידע ואינו משתמש בעוגיות. השם והפרטים שאתה מקליד נשלחים רק אליי דרך וואטסאפ, ומשמשים לתיאום התור בלבד ולא מועברים לאף גורם.</p></details>
+</div></footer>
+
+<script>
+function upd(){
+ var n=document.getElementById('n').value.trim(),s=document.getElementById('s').value,d=document.getElementById('d').value,h=document.getElementById('h').value;
+ if(d){var wd=new Date(d+'T12:00').getDay();if(wd>4){document.getElementById('msg').textContent='אני עובד בימים ראשון עד חמישי בלבד. בחר יום אחר.';document.getElementById('d').value='';d='';}else{document.getElementById('msg').textContent='';}}
+ var when='';
+ if(d){when=' ביום '+new Date(d+'T12:00').toLocaleDateString('he-IL',{weekday:'long',day:'numeric',month:'numeric',year:'numeric'});}
+ if(h){when+=' בשעה '+h;}
+ var t='שלום, אני '+(n||'')+'. אשמח לקבוע תור ל'+s+when+'.';
+ document.getElementById('send').href='https://wa.me/972535541715?text='+encodeURIComponent(t);
+}
+['n','s','d','h'].forEach(function(i){var e=document.getElementById(i);e.addEventListener('input',upd);e.addEventListener('change',upd);});
+document.getElementById('d').min=new Date().toISOString().slice(0,10);
+var hs=document.getElementById('h');for(var m=600;m<=1170;m+=30){var o=document.createElement('option');o.value=o.textContent=('0'+Math.floor(m/60)).slice(-2)+':'+('0'+m%60).slice(-2);hs.appendChild(o);}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});document.querySelectorAll('main section').forEach(function(s){s.classList.add('rv');io.observe(s);});}
+upd();
+</script>
+</body>
+</html>
